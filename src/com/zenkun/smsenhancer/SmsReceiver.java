@@ -11,7 +11,7 @@ public class SmsReceiver extends BroadcastReceiver {
     if (Log.DEBUG) Log.v("SMSReceiver: onReceive()");
     intent.setClass(context, SmsReceiverService.class);
     intent.putExtra("result", getResultCode());
-
+    //this.abortBroadcast();
     /*
      * This service will process the activity and show the popup (+ play notifications)
      * after it's work is done the service will be stopped.
