@@ -58,7 +58,7 @@ public class ConfigContactsActivity extends ListActivity {
     super.onCreate(savedInstanceState);
     requestWindowFeature(Window.FEATURE_PROGRESS);
     setContentView(R.layout.config_contacts_activity);
-
+Log.v("oncrea");
     ContentResolver content = getContentResolver();
     Cursor cursor =
       content.query(
@@ -110,6 +110,7 @@ public class ConfigContactsActivity extends ListActivity {
   @Override
   protected void onResume() {
     super.onResume();
+    Log.v("onres");
     fillData();
   }
 
@@ -125,7 +126,7 @@ public class ConfigContactsActivity extends ListActivity {
 
   @Override
   protected void onDestroy() {
-    mDbAdapter.close();
+	  if(mDbAdapter==null)mDbAdapter.close();
     super.onDestroy();
   }
 
@@ -150,6 +151,10 @@ public class ConfigContactsActivity extends ListActivity {
   @Override
   protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
+    if(mDbAdapter==null)
+    {
+    	Log.v("nulo");
+    }
     switch (requestCode) {
       case REQ_CODE_CHOOSE_CONTACT:
         if (resultCode == RESULT_OK) { // Success, contact chosen
@@ -337,7 +342,12 @@ public class ConfigContactsActivity extends ListActivity {
         // loop through the local sms popup contacts table
         while (mCursor.moveToNext()) {
           count++;
-
+          if(mDbAdapter==null)
+          {
+        	  Log.v("Nulo");
+          }
+          Log.v("NEW");
+          mDbAdapter = new SmsPopupDbAdapter(getApplicationContext());
           contactName = mCursor.getString(SmsPopupDbAdapter.KEY_CONTACT_NAME_NUM);
           contactId = mCursor.getLong(SmsPopupDbAdapter.KEY_CONTACT_ID_NUM);
           // Log.v("Name("+count+"): " + contactName);
@@ -357,14 +367,14 @@ public class ConfigContactsActivity extends ListActivity {
                 sysContactName = rawSysContactName.trim();
                 if (!contactName.equals(sysContactName)) {
                   // if different, update the local db
-                  mDbAdapter.updateContact(contactId, SmsPopupDbAdapter.KEY_CONTACT_NAME,
-                      sysContactName);
+                 // mDbAdapter.updateContact(contactId, SmsPopupDbAdapter.KEY_CONTACT_NAME,
+                     // sysContactName);
                 }
               }
             } else {
               // if this contact has been removed from the system db then delete
               // from the local db
-              mDbAdapter.deleteContact(contactId, false);
+            //  mDbAdapter.deleteContact(contactId, false);
             }
             sysContactCursor.close();
           }
@@ -396,8 +406,8 @@ public class ConfigContactsActivity extends ListActivity {
     @Override
     protected void onPostExecute(Object result) {
       getWindow().setFeatureInt(Window.FEATURE_PROGRESS, Window.PROGRESS_END);
-      if (mCursor != null) mCursor.close();
-      if (mDbAdapter != null) mDbAdapter.close();
+    //  if (mCursor != null) mCursor.close();
+     // if (mDbAdapter != null) mDbAdapter.close();
     }
 
     @Override

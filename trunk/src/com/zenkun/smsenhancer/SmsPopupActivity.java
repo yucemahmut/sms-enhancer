@@ -137,6 +137,10 @@ public class SmsPopupActivity extends Activity {
     requestWindowFeature(Window.FEATURE_NO_TITLE);
     setContentView(R.layout.popup);
 
+    WindowManager.LayoutParams lp = this.getWindow().getAttributes();  
+    lp.alpha=0.5f;  
+    this.getWindow().setAttributes(lp);
+    
     setupPreferences();
     setupViews();
     
@@ -193,6 +197,7 @@ public class SmsPopupActivity extends Activity {
 
     // Set privacy mode
      SmsPopupView.setPrivacy(privacyMode, privacySender);
+     
   }
   private Bitmap decodeUri(Uri selectedImage) throws FileNotFoundException {
 
@@ -283,6 +288,7 @@ public class SmsPopupActivity extends Activity {
 
     // Find main views
     smsPopupPager = (SmsPopupPager) findViewById(R.id.SmsPopupPager);
+   // smsPopupPager.setBackgroundColor(android.R.color.transparent);
     //use custom Image
     boolean CustomImage=false;
     if (enableBackground) {
@@ -1339,6 +1345,9 @@ public class SmsPopupActivity extends Activity {
    */
   private void quickReply() {
     quickReply("");
+    SmsMmsMessage message = smsPopupPager.getActiveMessage();
+    message.setThreadRead();
+    
   }
 
   /**

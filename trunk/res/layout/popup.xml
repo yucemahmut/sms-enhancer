@@ -3,10 +3,11 @@
 	android:layout_height="fill_parent" android:orientation="vertical"
 	android:minWidth="310dp" android:id="@+id/MainLayout"
 	android:layout_width="fill_parent"
-	android:background="@android:color/transparent"
-	>
 
-	<!-- 
+	>
+	<!--
+		android:alpha="0.4"
+	android:background="#00000000" 
 	<RelativeLayout android:layout_width="wrap_content"
 		android:background="@android:color/darker_gray" android:layout_height="wrap_content"
 		android:padding="2dp" android:id="@+id/HeaderLayout">

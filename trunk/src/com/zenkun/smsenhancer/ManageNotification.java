@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.AudioManager;
@@ -114,7 +115,6 @@ public class ManageNotification {
 
       // Seems this is needed for the number value to take effect on the Notification
       myNM.cancel(notif);
-
       if (Log.DEBUG) Log.v("*** Notify running ***");
       myNM.notify(notif, notification);
     }
@@ -134,6 +134,7 @@ public class ManageNotification {
    */
   public static void show(Context context, SmsMmsMessage message) {
     notify(context, message, false, NOTIFICATION_ALERT);
+    
   }
 
   /*
@@ -169,6 +170,7 @@ public class ManageNotification {
     if (unreadCount < 1) {
       return;
     }
+    Bitmap b= SmsPopupUtils.getPersonPhoto(context, message.getContactLookupUri());
 
     PopupNotification n = buildNotification(context, message.getContactId(), onlyUpdate, notif);
 
@@ -366,7 +368,10 @@ public class ManageNotification {
     /*
      * Ok, let's create our Notification object and set up all its parameters.
      */
-    Notification notification = new Notification();
+   // Notification notification = new Notification();
+    
+    Notification notification = new Notification(R.drawable.phone_default,"sms",System.currentTimeMillis());
+    
 
     // Set auto-cancel flag
     notification.flags = Notification.FLAG_AUTO_CANCEL;

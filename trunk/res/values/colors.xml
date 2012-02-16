@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <!-- Activity background color -->
-  <drawable name="class_zero_background">#7f040000</drawable>    
+  <drawable name="class_zero_background">#7f040000</drawable>  
+<drawable name="transparent">#00000000</drawable>
 </resources>
