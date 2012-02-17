@@ -5,6 +5,7 @@ import com.zenkun.smsenhancer.preferences.ButtonListPreference;
 import com.zenkun.smsenhancer.preferences.DialogPreference;
 import com.zenkun.smsenhancer.preferences.EmailDialogPreference;
 import com.zenkun.smsenhancer.preferences.QuickReplyCheckBoxPreference;
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -244,15 +245,18 @@ public class SmsPopupConfigActivity extends PreferenceActivity {
 
 
     // Donate dialog preference
-    donateDialogPref = findPreference(getString(R.string.pref_donate_key));
-    if (donateDialogPref != null) {
-      donateDialogPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-        @Override
-		public boolean onPreferenceClick(Preference preference) {
-          SmsPopupConfigActivity.this.showDialog(DIALOG_DONATE);
-          return true;
-        }
-      });
+    if(!License.isPlusVersion(getApplicationContext()))
+    {
+	    donateDialogPref = findPreference(getString(R.string.pref_donate_key));
+	    if (donateDialogPref != null) {
+	      donateDialogPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+	        @Override
+			public boolean onPreferenceClick(Preference preference) {
+	          SmsPopupConfigActivity.this.showDialog(DIALOG_DONATE);
+	          return true;
+	        }
+	      });
+	    }
     }
     
     // Split long messages preference (for some CDMA carriers like Verizon)

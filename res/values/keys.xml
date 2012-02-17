@@ -84,6 +84,9 @@
    <string name="pref_enableBackgroundcustom_key">backgroundcustomimage</string>
    <string name="pref_enableBackgroundselect_key">selectimage</string>
    <string name="pref_backgroundPath_key">backgroundpath</string>
+   <string name="pref_transparency_key">transparencylevel</string>
+   
+   <string name="pref_popupback_enabled_key">backbuttonread</string>
        
   <!-- c_ stands for contact menu -->
  <string name="c_pref_keywords_key">c_Keywords</string>
@@ -93,9 +96,4 @@
    <string name="c_pref_keywords_custommsg_key">c_customsms</string>
    <string name="c_pref_keywords_custommsg_popup_key">c_customsmspopup</string>
       <string name="c_pref_keywords_htcsecurebox_key">c_movehtcsecure</string>
-       
-   
-   
- 
-      
 </resources>
