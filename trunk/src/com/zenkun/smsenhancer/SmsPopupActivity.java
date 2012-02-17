@@ -3,6 +3,7 @@ package com.zenkun.smsenhancer;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.zenkun.smsenhancer.R;
@@ -94,6 +95,8 @@ public class SmsPopupActivity extends Activity {
   private boolean enableBackground=false;
   private boolean enableCustomBackground=false;
   private String backgroundPath="";
+  private int transparency=100;
+  private boolean readOnBackButton=false;
 
   private static final double WIDTH = 0.9;
   private static final int MAX_WIDTH = 640;
@@ -136,12 +139,17 @@ public class SmsPopupActivity extends Activity {
 
     requestWindowFeature(Window.FEATURE_NO_TITLE);
     setContentView(R.layout.popup);
-
-    WindowManager.LayoutParams lp = this.getWindow().getAttributes();  
-    lp.alpha=0.5f;  
-    this.getWindow().setAttributes(lp);
-    
     setupPreferences();
+    try
+    {
+	    WindowManager.LayoutParams lp = this.getWindow().getAttributes();  
+	    lp.alpha=(float) (transparency*0.01);  
+	    this.getWindow().setAttributes(lp);
+    }catch (Exception e) {
+    	if(Log.DEBUG)Log.v("Error: "+e.getMessage());
+    	e.printStackTrace();
+	}
+    
     setupViews();
     
 
@@ -169,7 +177,10 @@ public class SmsPopupActivity extends Activity {
   private void setupPreferences() {
     // Get shared prefs
     mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-
+    //check if should mark the messages as read on backbutton pressed
+    readOnBackButton = mPrefs.getBoolean(getString(R.string.pref_popupback_enabled_key), false);
+    
+    
     // Check if screen orientation should be "user" or "behind" based on
     // prefs
     if (mPrefs.getBoolean(getString(R.string.pref_autorotate_key), Defaults.PREFS_AUTOROTATE)) {
@@ -177,6 +188,7 @@ public class SmsPopupActivity extends Activity {
     } else {
       setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_BEHIND);
     }
+    transparency = mPrefs.getInt(getString(R.string.pref_transparency_key), 100);
     enableBackground = mPrefs.getBoolean(getString
     		(R.string.pref_enableBackgroundImage_key),false);
     enableCustomBackground = mPrefs.getBoolean(getString
@@ -825,6 +837,7 @@ public class SmsPopupActivity extends Activity {
             @Override
 			public void onClick(DialogInterface dialog, int whichButton) {
               deleteMessage();
+              overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
           }).setNegativeButton(android.R.string.cancel, null).create();
 
@@ -1135,8 +1148,27 @@ public class SmsPopupActivity extends Activity {
     menu.add(Menu.NONE, CONTEXT_TTS_ID, Menu.NONE, getString(R.string.button_tts));
     menu.add(Menu.NONE, CONTEXT_INBOX_ID, Menu.NONE, getString(R.string.button_inbox));
   }
+  
 
-  /**
+@Override
+public void onBackPressed() {
+	if(readOnBackButton)
+	{
+		try
+		{
+			ArrayList <SmsMmsMessage> mensajes= this.smsPopupPager.getAllMessages();
+			for (Iterator iterator = mensajes.iterator(); iterator.hasNext();) {
+				SmsMmsMessage smsMmsMessage = (SmsMmsMessage) iterator.next();
+				smsMmsMessage.setMessageRead();
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	super.onBackPressed();
+	overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+}
+/**
    * Context Menu Item Selected
    */
   @Override
@@ -1250,6 +1282,7 @@ public class SmsPopupActivity extends Activity {
         SmsPopupActivity.this.getApplicationContext().startActivity(reply);
         replying = true;
         myFinish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
       }
     });
   }
@@ -1298,6 +1331,7 @@ public class SmsPopupActivity extends Activity {
         SmsPopupActivity.this.getApplicationContext().startActivity(i);
         inbox = true;
         myFinish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
       }
     });
   }
@@ -1310,7 +1344,7 @@ public class SmsPopupActivity extends Activity {
     i.setAction(SmsPopupUtilsService.ACTION_DELETE_MESSAGE);
     i.putExtras(smsPopupPager.getActiveMessage().toBundle());
     SmsPopupUtilsService.beginStartingService(SmsPopupActivity.this.getApplicationContext(), i);
-
+    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     removeActiveMessage();
   }
 
@@ -1344,9 +1378,10 @@ public class SmsPopupActivity extends Activity {
    * the current SmsMmsMessage (in case another message comes in)
    */
   private void quickReply() {
-    quickReply("");
-    SmsMmsMessage message = smsPopupPager.getActiveMessage();
-    message.setThreadRead();
+	  SmsMmsMessage message = smsPopupPager.getActiveMessage();
+	  message.setThreadRead();
+	  quickReply("");
+    
     
   }
 
@@ -1365,6 +1400,7 @@ public class SmsPopupActivity extends Activity {
       }
       updateQuickReplyView(text);
       showDialog(DIALOG_QUICKREPLY);
+      overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
   }
 
@@ -1411,10 +1447,16 @@ public class SmsPopupActivity extends Activity {
     if (smsPopupPager.removeActiveMessage()) {
       ManageNotification.update(this, smsPopupPager.getActiveMessage());
     } else { // No more messages to remove, finish up.
+    	
       myFinish();
+      overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+      
     }
   }
-
+  //activity transition effect
+  
+  
+  
   /*
    * *****************************************************************************
    * Misc methods **************************************************************
@@ -1490,6 +1532,7 @@ public class SmsPopupActivity extends Activity {
         break;
       case ButtonListPreference.BUTTON_DELETE: // Delete
         showDialog(DIALOG_DELETE);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         break;
       case ButtonListPreference.BUTTON_DELETE_NO_CONFIRM: // Delete no
                                                           // confirmation

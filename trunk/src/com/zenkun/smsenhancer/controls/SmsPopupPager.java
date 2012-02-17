@@ -45,6 +45,11 @@ public class SmsPopupPager extends ViewPager implements OnPageChangeListener {
   public int getPageCount() {
     return messages.size();
   }
+  public ArrayList<SmsMmsMessage> getAllMessages()
+  {
+	  return messages;
+	  
+  }
 
   /**
    * Add a message and its view to the end of the list of messages.

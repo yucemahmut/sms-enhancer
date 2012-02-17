@@ -263,7 +263,7 @@
    <string name="pref_button3_title">Button 3 Configuration</string>
     
 <!-- Donate Strings (not used right now) -->
-   <string name="pref_donate_title">Buy to SMS Enhancerplus</string>    
+   <string name="pref_donate_title">Buy SMS Enhancer Plus</string>    
    <string name="pref_donate_text">SMS Enhancer is a free application that I work on in my spare time.  If you find it useful, and can spare a few bucks, a donation would be much appreciated.\n\nThanks!</string>
    <string name="pref_donate_market_button">Buy pro Android Market</string>
    <string name="pref_donate_paypal_button">Donate via PayPal</string>
@@ -380,8 +380,16 @@
     <string name="pref_selectpicture_intent">Select Image</string>
      
 	<string name="pref_backgroundcustomselect_titile">Select Image</string>
+	<string name="pref_transparency_titile">Transparency level</string>
+	<string name="pref_transparency_summary">Set the Pop Up Transparency level</string>
+	<string name="pref_transparency_message">Select level</string>
+	<string name="pref_transparency_percent">% Transparency</string>
+    
+   <string name="pref_popupback_enabled_title">Set Read on Back Button</string>
+  <string name="pref_popupback_enabled_summaryon">The messages will be marked as read when you press Back Button</string>
+  <string name="pref_popupback_enabled_summaryoff">The message will not be marked as read on Back Button</string>     
          
-      <string name="pro_version">Need Pro versio</string>
-      <string name="pro_versionTitle">This Feature its only in Plus Version</string>
+    <string name="pro_version">Need Pro versio</string>
+    <string name="pro_versionTitle">This Feature its only in Plus Version</string>
        
 </resources>

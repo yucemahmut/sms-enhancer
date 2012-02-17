@@ -272,6 +272,15 @@
     <string name="pref_selectpicture_intent">Seleccionar Imagen</string>
 	<string name="pref_backgroundcustomselect_titile">Seleccionar Imagen</string>
 	
+	<string name="pref_transparency_titile">Nivel de Transparencia</string>
+	<string name="pref_transparency_summary">Transparencia en el Pop Up</string>
+	<string name="pref_transparency_message">Seleccione el Nivel</string>
+	<string name="pref_transparency_percent">% Transparencia</string>
+	
+<string name="pref_popupback_enabled_title">Marcar como leidos con el Boton de Retroceso</string>
+  <string name="pref_popupback_enabled_summaryon">Los mensajes seran marcados como leidos al pulsar la tecla de retroceso</string>
+  <string name="pref_popupback_enabled_summaryoff">Los mensajes no seran marcados como leidos al pulsar la teclo de retroceso</string>
+	
       <string name="pro_version">Necesita la version pro</string>
         <string name="pro_versionTitle">Esta opcion solo esta disponible en la version Plus</string>
 </resources>

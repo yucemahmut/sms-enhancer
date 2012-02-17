@@ -29,6 +29,12 @@
               android:summaryOn="@string/pref_popup_enabled_summaryon"
               android:summaryOff="@string/pref_popup_enabled_summaryoff"
               android:defaultValue="true" />
+              <CheckBoxPreference
+              android:key="@string/pref_popupback_enabled_key"
+              android:title="@string/pref_popupback_enabled_title"
+              android:summaryOn="@string/pref_popupback_enabled_summaryon"
+              android:summaryOff="@string/pref_popupback_enabled_summaryoff"
+              android:defaultValue="false" />
             <com.zenkun.smsenhancer.preferences.DialogCheckBoxPreference
               android:key="@string/pref_notif_enabled_key"
               android:title="@string/pref_notif_enabled_title"
@@ -183,11 +189,7 @@
                       android:summaryOn="@string/pref_keywordsHtcSecure_summaryon"
                       android:summaryOff="@string/pref_keywordsHtcSecure_summaryoff"
                       android:dependency="@string/pref_keywords_key"/>
-                  
-                  
-                  
           </PreferenceCategory>
-              
         </PreferenceScreen>
         <PreferenceScreen
           android:key="@string/contacts_key"
@@ -209,6 +211,14 @@
       android:summary="@string/pref_additional_summary"
       android:dependency="@string/pref_enabled_key">
      <PreferenceCategory android:title="@string/pref_enablebackground_title">
+      <com.zenkun.smsenhancer.preferences.DialogTransparentPreference android:key="@string/pref_transparency_key"
+        android:title="@string/pref_transparency_titile"
+        android:summary="@string/pref_transparency_summary"
+        android:dialogMessage="@string/pref_transparency_message"
+        android:defaultValue="100"
+        android:text="@string/pref_transparency_percent"
+        android:max="100"
+        />
          <CheckBoxPreference android:key="@string/pref_enableBackgroundImage_key"
              android:title="@string/pref_enablebackground_title"
              android:summaryOn="@string/pref_enablebackground_summaryOn"
