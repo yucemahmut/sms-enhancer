@@ -1154,13 +1154,18 @@ public class SmsPopupActivity extends Activity {
 public void onBackPressed() {
 	if(readOnBackButton)
 	{
+		final ArrayList <SmsMmsMessage> mensajes= this.smsPopupPager.getAllMessages();
 		try
-		{
-			ArrayList <SmsMmsMessage> mensajes= this.smsPopupPager.getAllMessages();
-			for (Iterator iterator = mensajes.iterator(); iterator.hasNext();) {
-				SmsMmsMessage smsMmsMessage = (SmsMmsMessage) iterator.next();
-				smsMmsMessage.setMessageRead();
-			}
+		{new Thread(new Runnable() {
+		    public void run() {
+		    	
+				for (Iterator iterator = mensajes.iterator(); iterator.hasNext();) {
+					SmsMmsMessage smsMmsMessage = (SmsMmsMessage) iterator.next();
+					smsMmsMessage.setMessageRead();
+				}
+		    }
+		  }).start();
+			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -1282,7 +1287,7 @@ public void onBackPressed() {
         SmsPopupActivity.this.getApplicationContext().startActivity(reply);
         replying = true;
         myFinish();
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
       }
     });
   }
@@ -1378,8 +1383,12 @@ public void onBackPressed() {
    * the current SmsMmsMessage (in case another message comes in)
    */
   private void quickReply() {
-	  SmsMmsMessage message = smsPopupPager.getActiveMessage();
-	  message.setThreadRead();
+	  						new Thread(new Runnable() {
+		    public void run() {
+		    	SmsMmsMessage message = smsPopupPager.getActiveMessage();
+		  	  message.setThreadRead();
+		    }
+		  }).start();
 	  quickReply("");
     
     
@@ -1400,7 +1409,7 @@ public void onBackPressed() {
       }
       updateQuickReplyView(text);
       showDialog(DIALOG_QUICKREPLY);
-      overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    //  overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
   }
 
@@ -1535,7 +1544,6 @@ public void onBackPressed() {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         break;
       case ButtonListPreference.BUTTON_DELETE_NO_CONFIRM: // Delete no
-                                                          // confirmation
         deleteMessage();
         break;
       case ButtonListPreference.BUTTON_REPLY: // Reply
