@@ -283,4 +283,12 @@
 	
       <string name="pro_version">Necesita la version pro</string>
         <string name="pro_versionTitle">Esta opcion solo esta disponible en la version Plus</string>
+         <!-- Color Picker -->
+    <string name="dialog_color_picker">Selección de Color</string>
+    <string name="press_color_to_apply">Presiona sobre el color para seleccionar</string>    
+    
+    <!-- Preferences COlor Picker-->
+    <string name="pref_category">Categoria</string>
+    <string name="pref_colorsms_title">Elija el Color del  mensaje del SMS en el Popup</string>
+    <string name="pref_colorsms_summary">Elija el Color del  mensaje del SMS en el Popup</string>
 </resources>

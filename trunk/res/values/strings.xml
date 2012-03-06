@@ -391,5 +391,12 @@
          
     <string name="pro_version">Need Pro versio</string>
     <string name="pro_versionTitle">This Feature its only in Plus Version</string>
-       
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>    
+    
+    <!-- Preferences COlor Picker-->
+    <string name="pref_category">Category</string>
+    <string name="pref_colorsms_title">Choose the SMS Popup Color</string>
+    <string name="pref_colorsms_summary">Choose the SMS Message Popup Color</string>
 </resources>

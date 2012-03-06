@@ -8,10 +8,14 @@ import com.zenkun.smsenhancer.SmsPopupUtils;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.media.audiofx.PresetReverb;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.provider.ContactsContract.Contacts;
 import android.provider.ContactsContract.QuickContact;
 import android.text.TextUtils;
@@ -51,18 +55,29 @@ public class SmsPopupView extends LinearLayout {
   public static final int PRIVACY_MODE_HIDE_MESSAGE = 1;
   public static final int PRIVACY_MODE_HIDE_ALL = 2;
   private static int privacyMode = PRIVACY_MODE_OFF;
+  
+  private static SharedPreferences mPrefs=null;
+  private int color=Color.WHITE;
 
+  private void setupPrefs()
+  {
+	  mPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+	 color= mPrefs.getInt(getContext().getString(R.string.pref_colorPickerSMS_key), Color.WHITE);
+  }
+  
   public SmsPopupView(Context _context, SmsMmsMessage newMessage) {
     super(_context);
     context = _context;
+    setupPrefs();
     setupLayout(context);
     message = newMessage;
+    setupPrefs();
     populateViews(message);
   }
-
   public SmsPopupView(Context _context, AttributeSet attrs) {
     super(_context, attrs);
     context = _context;
+    setupPrefs();
     setupLayout(context);
   }
 
@@ -204,7 +219,7 @@ public class SmsPopupView extends LinearLayout {
 
   private void setupLayout(Context context) {
     View.inflate(context, R.layout.message, this);
-
+    
     // Find the main textviews and layouts
     fromTV = (TextView) findViewById(R.id.FromTextView);
     messageTV = (TextView) findViewById(R.id.MessageTextView);
@@ -213,6 +228,12 @@ public class SmsPopupView extends LinearLayout {
     mmsLayout = findViewById(R.id.MmsLinearLayout);
     privacyLayout = findViewById(R.id.ViewButtonLinearLayout);
     mmsSubjectTV = (TextView) findViewById(R.id.MmsSubjectTextView);
+    //sms enhancer change color
+    fromTV.setTextColor(color);
+    messageTV.setTextColor(color);
+    messageReceivedTV.setTextColor(color);
+    mmsSubjectTV.setTextColor(color);
+    
 
    // Find the ImageView that will show the contact photo
     photoImageView = (ImageView) findViewById(R.id.FromImageView);
