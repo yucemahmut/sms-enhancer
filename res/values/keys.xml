@@ -87,6 +87,9 @@
    <string name="pref_transparency_key">transparencylevel</string>
    
    <string name="pref_popupback_enabled_key">backbuttonread</string>
+   
+    <string name="pref_colorPickerSMS_key">colorpickersms</string>
+   
        
   <!-- c_ stands for contact menu -->
  <string name="c_pref_keywords_key">c_Keywords</string>

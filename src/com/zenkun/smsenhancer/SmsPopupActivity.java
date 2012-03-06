@@ -33,6 +33,7 @@ import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -97,6 +98,7 @@ public class SmsPopupActivity extends Activity {
   private String backgroundPath="";
   private int transparency=100;
   private boolean readOnBackButton=false;
+  private int colorSMS;
 
   private static final double WIDTH = 0.9;
   private static final int MAX_WIDTH = 640;
@@ -180,6 +182,7 @@ public class SmsPopupActivity extends Activity {
     //check if should mark the messages as read on backbutton pressed
     readOnBackButton = mPrefs.getBoolean(getString(R.string.pref_popupback_enabled_key), false);
     
+    colorSMS = mPrefs.getInt(getString(R.string.pref_colorPickerSMS_key), Color.WHITE);
     
     // Check if screen orientation should be "user" or "behind" based on
     // prefs
@@ -537,64 +540,6 @@ public class SmsPopupActivity extends Activity {
 	    mPrefs.setDatabase(!message.isDefault());
 		    mPrefs.close();
 	    
-//smsenhancer add new message to array so if pager change show the next msg
-	/*  ManagePreferences mPrefs = new ManagePreferences(getApplicationContext(), message.getContactId());
-	    boolean keywordsEnable =mPrefs.getBoolean
-	    			(R.string.pref_keywords_key, Defaults.PREFS_KEYWORDS_ENABLE,SmsPopupDbAdapter.KEY_KEYWORDS_ENABLE_NUM);
-	    
-	    String[] keywordsList =mPrefs.getString
-	    		(R.string.pref_keywordslist_key,"",SmsPopupDbAdapter.KEY_KEYWORDS_LIST_NUM).split(",");
-	    
-	    	    
-	    boolean KeywordExists= false;
-	    String msg = "";
-	    ArrayList<SmsMmsMessage> Messages=null;
-	    Messages =SmsPopupUtils.getUnreadMessages(this, message.getMessageId());
-	    if(keywordsEnable) //if the option its enable start looking keywords on message
-	    {
-	    	
-	    	String body = message.getMessageBody();
-	    	 for (String palabrasClaves : keywordsList) {
-	 			if(body.indexOf(" "+palabrasClaves+" ")!=-1 || body.startsWith(palabrasClaves+" ")
-	 					|| body.endsWith(" "+palabrasClaves))
-	 			{
-	 				KeywordExists =true;
-	 				
-	 				break;
-	 			} 
-	 		}
-		    if(KeywordExists)
-		    {
-		    	boolean moveHtcSecureBox =mPrefs.getBoolean
-				(R.string.pref_keywords_htcsecurebox_key, Defaults.PREFS_KEYWORDS_ENABLE,SmsPopupDbAdapter.KEY_KEYWORDS_HTCSECURE_NUM);
-			    message.MoveHtcSecure(moveHtcSecureBox);
-
-		    	
-		    	  boolean customSms = mPrefs.getBoolean(R.string.pref_keywords_enablecustommsg_key
-				    		, Defaults.PREFS_KEYWORDS_CUSTOM_MSG_ENABLE,SmsPopupDbAdapter.KEY_KEYWORDS_CUSTOMMSG_ENABLE_NUM);
-				    if(customSms)
-				    {
-				    	msg = mPrefs.getString(R.string.pref_keywords_custommsg_key
-				    			, Defaults.PREFS_KEYWORDS_CUSTOM_MSG_TEXT,SmsPopupDbAdapter.KEY_KEYWORDS_CUSTOMMSG_NUM);
-				    	message.setMessageBodyOriginal(body);
-				    	message.putCustomMessage(msg);
-				    	message.isCustomMessage(customSms);
-				    	 //we iterate over unread msgs
-					    
-				    	if(Messages!=null)
-				    	{
-					    	for (SmsMmsMessage smsMmsMessage : Messages) {
-					    		smsMmsMessage.setMessageBodyOriginal(smsMmsMessage.getMessageBody());
-								smsMmsMessage.putCustomMessage(msg);
-								smsMmsMessage.isCustomMessage(customSms); //if is custom msg we activate this so we can search thread for unread
-							}
-				    	}
-				    }
-				   
-				    
-		    }
-	    }
-		    mPrefs.close();*/
 
 	smsPopupPager.addMessage(message);
 		    
@@ -1158,7 +1103,7 @@ public void onBackPressed() {
 		try
 		{new Thread(new Runnable() {
 		    public void run() {
-		    	
+		    	if(Log.DEBUG)Log.v("Marking as reading");
 				for (Iterator iterator = mensajes.iterator(); iterator.hasNext();) {
 					SmsMmsMessage smsMmsMessage = (SmsMmsMessage) iterator.next();
 					smsMmsMessage.setMessageRead();
@@ -1167,6 +1112,7 @@ public void onBackPressed() {
 		  }).start();
 			
 		}catch (Exception e) {
+			if(Log.DEBUG)Log.v("Error marking as read onbackpressed");
 			e.printStackTrace();
 		}
 	}
@@ -1287,7 +1233,7 @@ public void onBackPressed() {
         SmsPopupActivity.this.getApplicationContext().startActivity(reply);
         replying = true;
         myFinish();
-        //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
       }
     });
   }
@@ -1387,6 +1333,7 @@ public void onBackPressed() {
 		    public void run() {
 		    	SmsMmsMessage message = smsPopupPager.getActiveMessage();
 		  	  message.setThreadRead();
+		  	  if(Log.DEBUG)Log.v("the message was marked as read in quickReply");
 		    }
 		  }).start();
 	  quickReply("");
@@ -1409,7 +1356,7 @@ public void onBackPressed() {
       }
       updateQuickReplyView(text);
       showDialog(DIALOG_QUICKREPLY);
-    //  overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
   }
 

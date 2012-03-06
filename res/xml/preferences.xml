@@ -219,6 +219,13 @@
         android:text="@string/pref_transparency_percent"
         android:max="100"
         />
+        <com.zenkun.colorpicker.ColorPickerPreference 
+			android:key="@string/pref_colorPickerSMS_key"
+			android:persistent="true"
+			android:title="@string/pref_colorsms_title" 
+			android:summary="@string/pref_colorsms_title"
+			android:defaultValue="#FFFFFF"
+		/>
          <CheckBoxPreference android:key="@string/pref_enableBackgroundImage_key"
              android:title="@string/pref_enablebackground_title"
              android:summaryOn="@string/pref_enablebackground_summaryOn"
