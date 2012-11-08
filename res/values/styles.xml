@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<style name="DialogTheme" parent="android:Theme.Dialog">
-</style>
-<style name="ButtonBar" parent="android:style/DeviceDefault.ButtonBar.AlertDialog">
-</style>
+
+    <style name="DialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+	<style name="ButtonHoloDark" parent="@android:style/Widget.Holo.Button.Borderless.Small">
+		<item name="android:background">@drawable/btn_default_holo_dark</item>
+		<item name="android:textColor">#ffffff</item>
+	</style>
+	
+    <style name="ButtonBar">
+        <item name="android:paddingTop">5dip</item>
+        <item name="android:paddingLeft">4dip</item>
+        <item name="android:paddingRight">4dip</item>
+        <item name="android:paddingBottom">1dip</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton"></style>
+
+    <style name="NotificationIconPreferenceListItem" parent="@android:style/TextAppearance.Large.Inverse"></style>
+
 </resources>

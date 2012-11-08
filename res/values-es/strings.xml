@@ -29,7 +29,7 @@
   <string name="pref_enabled_summaryoff">SMS Enhancer deshabilitado</string>
   <string name="pref_about_title">Acerca de</string>
   <string name="pref_about_summary">Acerca de SMS Enhancer</string>
-  <string name="pref_about_text">SMS Enhancer es una aplicacion basada en Sms popup pero mejorada en el UI y rendimiento,Ademas se agrego una opcion de tener Palabras claves,las cuales permitiran ocultar mensajes basadas en palabras personalizables.\n\nAlguna Duda envia correo a: zenyagami@gmail.com</string>
+  <string name="pref_about_text">Por favor considera Donar.Paso mucho tiempor mejorando esta App\nSMS Enhancer es una aplicacion basada en Sms popup pero mejorada en el UI y rendimiento,Ademas se agrego una opcion de tener Palabras claves,las cuales permitiran ocultar mensajes basadas en palabras personalizables.\n\nAlguna Duda envia correo a: zenyagami@gmail.com\n Gracias a todos los miembros de XDA por su ayuda</string>
   <string name="pref_faq_title">FAQ</string>
   <string name="pref_faq_summary">Preguntas más frecuentes (FAQ)</string>
   <string name="pref_releasenotes_title">¿Qué hay nuevo?</string>
@@ -178,7 +178,7 @@
   <string name="pref_button1_title">Configuración Botón 1</string>
   <string name="pref_button2_title">Configuración Botón 2</string>
   <string name="pref_button3_title">Configuración Botón 3</string>
-  <string name="pref_donate_title">Comprar a SMS Enhancer plus</string>
+  <string name="pref_donate_title">Donar a SMS Enhancer</string>
   <string name="pref_donate_text">SMS Enhancer es una aplicación gratuita .Si la encuentra útil, y puedes aportar con una donación, esta será muy agradecida.\n\nGracias!</string>
   <string name="pref_donate_market_button">Comprar via Android Market</string>
   <string name="pref_donate_paypal_button">Donar via PayPal</string>
@@ -285,10 +285,15 @@
         <string name="pro_versionTitle">Esta opcion solo esta disponible en la version Plus</string>
          <!-- Color Picker -->
     <string name="dialog_color_picker">Selección de Color</string>
-    <string name="press_color_to_apply">Presiona sobre el color para seleccionar</string>    
-    
+    <string name="press_color_to_apply">Presiona sobre el color para seleccionar</string>
+        
+      <string name="pref_useUnlockButton_title">Muestra Boton desbloqueo</string>
+    <string name="pref_useUnlockButton_summaryon">Boton de desbloqueo se mostrara en la pantalla de bloqueo</string>
+    <string name="pref_useUnlockButton_summaryoff">Se mostrarn los botones normales en la pantalla</string>
     <!-- Preferences COlor Picker-->
     <string name="pref_category">Categoria</string>
     <string name="pref_colorsms_title">Elija el Color del  mensaje del SMS en el Popup</string>
     <string name="pref_colorsms_summary">Elija el Color del  mensaje del SMS en el Popup</string>
+           <string name="pref_fontsize_title">Tamaño de la fuente del SMS</string>
+    <string name="pref_font_size_summary">Seleccione el tamaño de la fuente del SMS</string>
 </resources>

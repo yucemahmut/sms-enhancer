@@ -6,7 +6,7 @@
   android:id="@+id/DonateScrollView">
   <LinearLayout
     android:id="@+id/DonateLinearLayout"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:layout_width="fill_parent"
     android:orientation="vertical"
     android:padding="5dp">
@@ -33,6 +33,7 @@
       android:layout_height="wrap_content"
       android:id="@+id/DonatePaypalButton"
       android:layout_gravity="center_horizontal"
-      android:text="@string/pref_donate_paypal_button" android:visibility="invisible"></Button>
+      android:visibility="gone"
+      android:text="@string/pref_donate_paypal_button"></Button>
   </LinearLayout>
 </ScrollView>

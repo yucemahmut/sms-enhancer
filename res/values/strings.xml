@@ -40,7 +40,7 @@
 
    <string name="pref_about_title">About</string>
    <string name="pref_about_summary">About SMS Enhancer</string>
-   <string name="pref_about_text">SMS Enhancer its an application based in SmsPopup by Adam K Email: adam\@everythingandroid.net\n\n This Applications let the users control the way they receive the notifications,you can control the activation of the sms depending some conditions like contacts or Keywords.\nFor example if a incoming message contains a word (custom word)for example\"my love\" you can choose if the notification its triggered or even launch a Custom Message\n\nFor more info zenyagami@gmail.com</string>
+    <string name="pref_about_text">PLEASE consider Donate i spent a lot of hour trying to get better and better. SMS Enhancer its an application based in SmsPopup by Adam K Email: adam\@everythingandroid.net\n\n This Applications let the users control the way they receive the notifications,you can control the activation of the sms depending some conditions like contacts or Keywords.\nFor example if a incoming message contains a word (custom word)for example\"my love\" you can choose if the notification its triggered or even launch a Custom Message\n\nFor more info zenyagami@gmail.com\nThanks All folks on XDA for the help :)</string>
 
    <string name="pref_faq_title">FAQ</string>
    <string name="pref_faq_summary">Frequently Asked Questions</string>
@@ -263,7 +263,7 @@
    <string name="pref_button3_title">Button 3 Configuration</string>
     
 <!-- Donate Strings (not used right now) -->
-   <string name="pref_donate_title">Buy SMS Enhancer Plus</string>    
+   <string name="pref_donate_title">Donate SMS Enhancer</string>    
    <string name="pref_donate_text">SMS Enhancer is a free application that I work on in my spare time.  If you find it useful, and can spare a few bucks, a donation would be much appreciated.\n\nThanks!</string>
    <string name="pref_donate_market_button">Buy pro Android Market</string>
    <string name="pref_donate_paypal_button">Donate via PayPal</string>
@@ -384,7 +384,7 @@
 	<string name="pref_transparency_summary">Set the Pop Up Transparency level</string>
 	<string name="pref_transparency_message">Select level</string>
 	<string name="pref_transparency_percent">% Transparency</string>
-    
+	
    <string name="pref_popupback_enabled_title">Set Read on Back Button</string>
   <string name="pref_popupback_enabled_summaryon">The messages will be marked as read when you press Back Button</string>
   <string name="pref_popupback_enabled_summaryoff">The message will not be marked as read on Back Button</string>     
@@ -394,9 +394,17 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on Color to apply</string>    
+      <string name="pref_useUnlockButton_title">Show Unlock Button</string>
+    <string name="pref_useUnlockButton_summaryon">Unlock button will show when screen is locked</string>
+    <string name="pref_useUnlockButton_summaryoff">Regular buttons will show when screen is locked</string>
     
     <!-- Preferences COlor Picker-->
     <string name="pref_category">Category</string>
     <string name="pref_colorsms_title">Choose the SMS Popup Color</string>
     <string name="pref_colorsms_summary">Choose the SMS Message Popup Color</string>
+    <string name="pref_fontsize_title">SMS Message Font Size</string>
+    <string name="pref_font_size_summary">Choose the Font Size of the Message</string>
+    <string name="pref_showics_line_title">Show ICS horizontal line</string>
+    <string name="pref_showics_line_summaryOn">The Horizontal line will be showed</string>
+    <string name="pref_showics_line_summaryOff">There is not Horizontal Line</string>
 </resources>
