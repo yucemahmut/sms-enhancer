@@ -1,234 +1,402 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">SMS Enhancer</string>
-  <string name="new_text_at">Nova Mensagem às %s</string>
-  <string name="unread_text_waiting">%d outras mensagens não lidas</string>
-  <string name="mms_subject">Assunto:</string>
-  <string name="notification_multiple_title">Novas Mensagens</string>
-  <string name="notification_multiple_text">%d mensagens não lidas</string>
-  <string name="notification_scroll" formatted="false">%s: %s</string>
-  <string name="notification_scroll_privacy">Nova Mensagem de: %s</string>
-  <string name="button_close">Fechar</string>
-  <string name="button_reply">Responder</string>
-  <string name="button_inbox">Caixa de Entrada</string>
-  <string name="button_view">Ver</string>
-  <string name="button_view_mms">Ver MMS</string>
-  <string name="button_delete">Apagar</string>
-  <string name="button_next">Seguinte</string>
-  <string name="button_previous">Anterior</string>
-  <string name="button_unlock">Desbloquear</string>
-  <string name="button_tts">Texto-Para-Fala</string>
-  <string name="button_speak">Falar</string>
-  <string name="button_delete_noconfirm">Apagar</string>
-  <string name="button_quickreply">Resposta Rápida</string>
-  <string name="button_disabled">Desativado</string>
-  <string name="pref_config_title">Configuração de Popup</string>
-  <string name="pref_other_title">Outro</string>
-  <string name="pref_enabled_title">Activar SMS Enhancer</string>
-  <string name="pref_enabled_summaryon">Popup da SMS estão activos</string>
-  <string name="pref_enabled_summaryoff">Popup da SMS estão desactivos</string>
-  <string name="pref_about_title">Sobre</string>
-  <string name="pref_about_summary">Sobre SMS Enhancer</string>
-  <string name="pref_about_text">Portuguese Translation by: Daniel Rodrigues\nEmail:naotodigo\@gmail.com\n</string>
-  <string name="pref_faq_title">FAQ</string>
-  <string name="pref_faq_summary">Perguntas mais frequentes (FAQ)</string>
-  <string name="pref_releasenotes_title">Novidades</string>
-  <string name="pref_releasenotes_summary">Ver Novidades Desta Versão</string>
-  <string name="pref_releasenotes_text">\nhttp://code.google.com/p/android-smspopup/wiki/ReleaseNotes</string>
-  <string name="pref_sendemail_title">E-mail do Programador</string>
-  <string name="pref_sendemail_summary">Enviar Comentários ou Reportar Bugs ao Programador</string>
-  <string name="pref_sendemail_dialog">Posso incluir a sua informação de sistema no e-mail (Isto irá ajudar na solução de problemas de forma prematura)?</string>
-  <string name="pref_sendemail_buttonok">Certo</string>
-  <string name="pref_sendemail_buttoncancel">Nem Pensar</string>
-  <string name="pref_additional_title">Configuração Adicional</string>
-  <string name="pref_additional_summary">Configuração do SMS Enhancer Adicional</string>
-  <string name="pref_timeout_title">Contagem Para Adormecer</string>
-  <string name="pref_timeout_summary">O ecrã irá adormeceu após este tempo</string>
-  <string name="pref_dimscreen_title">Desvanecer ecrã do Popup</string>
-  <string name="pref_dimscreen_summaryon">Ecrã do Popup não será tão brilhante (Poupa Bateria)</string>
-  <string name="pref_dimscreen_summaryoff">Ecrã do Popup será mais brilhante</string>
-  <string name="pref_privacy_title">Modo de Privacidade</string>
-  <string name="pref_privacy_summaryon">Conteúdos da Mensagem será apenas mostrado após desbloqueio</string>
-  <string name="pref_privacy_summaryoff">Conteúdos da Mensagem será mostrado imediatamente</string>
-  <string name="pref_markread_title">Marcar Como Lido</string>
-  <string name="pref_markread_summaryon">Mensagens serão marcadas como lidas ao clicar \"Fechar\"</string>
-  <string name="pref_markread_summaryoff">Mensagens não serão marcadas como lidas ao clicar \"Fechar\"</string>
-  <string name="pref_onlyShowOnKeyguard_title">Popup Restrito</string>
-  <string name="pref_onlyShowOnKeyguard_summaryon">Popup será apenas mostrado quando teclado bloqueado</string>
-  <string name="pref_onlyShowOnKeyguard_summaryoff">Popup mostrado sempre</string>
-  <string name="pref_require_unlock_title">Requer Desbloqueio de Ecrã</string>
-  <string name="pref_require_unlock_summaryon">Botões Estarão Escondidos até o Ecrã Ser Desbloqueado</string>
-  <string name="pref_require_unlock_summaryoff">Botões Mostrados Imediatamente</string>
-  <string name="pref_inbox_app_title">Escolha Aplicação de Entrada</string>
-  <string name="pref_inbox_app_summary">Escolha a Aplicação que é utilizada para múltiplas mensagens</string>
-  <string name="pref_inbox_app_info">Note que a aplicação de responder a mensagem é definido pelo sistema</string>
-  <string name="pref_show_buttons_title">Mostrar Botões no Popup</string>
-  <string name="pref_show_buttons_summaryon">Botões no Popup são Visíveis</string>
-  <string name="pref_show_buttons_summaryoff">Botões estão escondidos no pressionar Longo do Menu</string>
-  <string name="pref_show_delete_button_title">Mostrar o Botão Apagar</string>
-  <string name="pref_show_delete_button_summaryon">Botão apagar está activo</string>
-  <string name="pref_show_delete_button_summaryoff">Botão apagar está desactivo</string>
-  <string name="pref_show_delete_button_dialog_title">Eliminar Mensagem</string>
-  <string name="pref_show_delete_button_dialog_text">Tem a certeza?</string>
-  <string name="pref_blur_title">Fundo Fosco</string>
-  <string name="pref_blur_summaryon">O Fundo da mensagem será mostrado desfocado</string>
-  <string name="pref_blur_summaryoff">O Fundo da mensagem não será mostrado desfocado</string>
-  <string name="pref_notif_title">Notificações</string>
-  <string name="pref_notif_summary">Configuração de Notificação</string>
-  <string name="pref_notif_category_title">Configuração de Notificação</string>
-  <string name="pref_vibrate_category_title">Configuração de Vibração</string>
-  <string name="pref_flashled_category_title">Configuração LED</string>
-  <string name="pref_reminder_category_title">Configuração de Lembretes</string>
-  <string name="pref_notif_enabled_title">Activar as Notificações</string>
-  <string name="pref_notif_enabled_summaryon">Notificações estão Activas</string>
-  <string name="pref_notif_enabled_summaryoff">Notificações estão Desactivas</string>
-  <string name="pref_notif_enabled_warning">Para evitar conflitos e alertas múltiplos, por favor desactive o sistema de notificação e qualquer outra aplicação que forneça notificações quando uma SMS é recebida.\n\nPara Desligar o sistema de notificações, vá à aplicação de mensagens, pressione menu -&gt; definições e desmarque notificações.</string>
-  <string name="pref_popup_enabled_title">Mostrar Popup</string>
-  <string name="pref_popup_enabled_summaryon">Mensagem abrirá no Popup</string>
-  <string name="pref_popup_enabled_summaryoff">Mensagem será mostrada apenas na área de notificação (se activa)</string>
-  <string name="pref_notif_test_title">Testar Notificação</string>
-  <string name="pref_notif_test_summary">Teste a Sua Notificação</string>
-  <string name="pref_notif_test_message">A Testar a sua Notificação neste momento</string>
-  <string name="pref_notif_sound_title">Som da Notificação</string>
-  <string name="pref_notif_sound_summary">Este som será tocado quando uma mensagem é recebida</string>
-  <string name="pref_vibrate_title">Vibração</string>
-  <string name="pref_vibrate_summaryon">Vibração está Ligado</string>
-  <string name="pref_vibrate_summaryoff">Vibração está Desactivada</string>
-  <string name="pref_vibrate_pattern_title">Padrão de Vibração</string>
-  <string name="pref_vibrate_pattern_summary">Definir Padrão de Vibração</string>
-  <string name="pref_vibrate_pattern_ok">Padrão de Vibração Personalizado definido</string>
-  <string name="pref_vibrate_pattern_bad">Padrão de Vibração Personalizado inválido</string>
-  <string name="pref_vibrate_pattern_help">Introduza Padrão de Vibração Personalizado, no formato:\nmillisOff, millisOn, etc\n\nPor Exemplo:\n0,1000\n0,500,200,500,200,500</string>
-  <string name="pref_custom_val">Personalizado</string>
-  <string name="pref_flashled_title">Piscar LED</string>
-  <string name="pref_flashled_summaryon">Piscar LED quando mensagem é recebida</string>
-  <string name="pref_flashled_summaryoff">Não piscar LED quando mensagem é recebida</string>
-  <string name="pref_flashled_color_title">Cor LED</string>
-  <string name="pref_flashled_color_summary">A cor do LED</string>
-  <string name="pref_flashled_color_custom_dialog_red">Vermelho:</string>
-  <string name="pref_flashled_color_custom_dialog_green">Verde:</string>
-  <string name="pref_flashled_color_custom_dialog_blue">Azul:</string>
-  <string name="pref_flashled_color_custom_dialog_preview">Pré-visualizar:</string>
-  <string name="pref_flashled_color_custom_set">Cor de LED Personalizada</string>
-  <string name="pref_flashled_pattern_title">Velocidade do LED</string>
-  <string name="pref_flashled_pattern_summary">Define a velocidade com que o LED pisca</string>
-  <string name="pref_flashled_pattern_ok">Velocidade do LED Personalizada</string>
-  <string name="pref_flashled_pattern_bad">Velocidade do LED Personalizada inválida</string>
-  <string name="pref_flashled_pattern_help">Introduza o tempo em milisegundos para desligar e ligar o LED</string>
-  <string name="pref_flashled_pattern_help_on">Tempo Ligado:</string>
-  <string name="pref_flashled_pattern_help_off">Tempo Desligado:</string>
-  <string name="pref_notif_repeat_title">Activar Lembretes</string>
-  <string name="pref_notif_repeat_summaryon">Lembrete de Mensagens não lidas está activo</string>
-  <string name="pref_notif_repeat_summaryoff">Lembrete de Mensagens não lidas está Desactivado</string>
-  <string name="pref_notif_repeat_interval_title">Intervalo de Lembrete</string>
-  <string name="pref_notif_repeat_interval_summary">O periodo de tempo entre lembretes</string>
-  <string name="pref_notif_repeat_interval_dialogTitle">Intervalo (minutos)</string>
-  <string name="pref_notif_repeat_times_title">Número de Lembretes</string>
-  <string name="pref_notif_repeat_times_summary">Número Total de lembretes a serem mostrados</string>
-  <string name="pref_notif_repeat_screen_on_title">Ligar Ecrã em Lembretes</string>
-  <string name="pref_notif_repeat_screen_on_summaryon">Lembretes irão Ligar o Ecrã de novo</string>
-  <string name="pref_notif_repeat_screen_on_summaryoff">Lembretes não irão Ligar o Ecrã de novo</string>
-  <string name="pref_notif_repeat_screen_on_warning">Aviso - Ligar o Ecrã para os Lembretes pode afectar significativamente a duração da bateria</string>
-  <string name="pref_notif_default_title">Notificações Por Defeito</string>
-  <string name="pref_notif_default_summary">Notificações para todos os contactos sem personalização individual</string>
-  <string name="pref_contacts_title">Notificação de Contactos</string>
-  <string name="pref_contacts_summary">Customização de Contactos individual</string>
-  <string name="pref_notif_help_title">Ajuda - Estou Confuso!</string>
-  <string name="pref_notif_help_summary">Ajuda de Notificações</string>
-  <string name="pref_notif_help_message">SMS Enhancer agora oferece a possibilidade de customizar notificações individuais. Quando uma nova mensagem é recebida, O SMS Enhancer irá primeiro verificar se o contacto tem uma notificação customizada. Se tiver, essas definições são usadas, caso contrário, serão usadas as notificações por defeito</string>
-  <string name="contact_customization_add">Adicionar Notificações Personalizadas</string>
-  <string name="contact_customization_edit">Editar Notificação Personalizada</string>
-  <string name="contact_customization_remove">Remover Notificação Personalizada</string>
-  <string name="contact_customization_removed_toast">Notificação Personalizada Removida</string>
-  <string name="contact_customization_save">Gravar</string>
-  <string name="contact_customization_title">Notificações para %s</string>
-  <string name="contact_customization_enabled">Notificações estão activas para %s</string>
-  <string name="contact_customization_disabled">Notificações desactivas para %s</string>
-  <string name="contact_customization_add_hint">Adicionar/Editar Nofiticações do Contacto</string>
-  <string name="ringtone_silent">Silêncio</string>
-  <string name="pref_message_presets_title">Modelos de Mensagens</string>
-  <string name="pref_message_presets_summary">Configure Modelos de Mensagens para Respostas Rápidas</string>
-  <string name="message_presets_add">Adicionar Modelo de Mensagem</string>
-  <string name="message_presets_edit">Editar Modelo de Mensagem</string>
-  <string name="message_presets_add_text">Criar</string>
-  <string name="message_presets_save_text">Gravar</string>
-  <string name="message_presets_delete_text">Apagar</string>
-  <string name="message_presets_edit_text">Editar</string>
-  <string name="message_presets_reorder_text">Mover para o topo</string>
-  <string name="message_presets_empty_text">Sem Modelos Definidos</string>
-  <string name="message_presets_add_toast">Modelo de Mensagem Adicionado</string>
-  <string name="message_presets_save_toast">Modelo de Mensagem Adicionado</string>
-  <string name="message_presets_delete_toast">Modelo de Mensagem Eliminado</string>
-  <string name="message_presets_reorder_toast">Modelo de Mensagem Movido para o topo</string>
-  <string name="message_presets_error_toast">Erro - Por favor tente de novo</string>
-  <string name="message_counter">%d Caracteres Restantes</string>
-  <string name="message_counter_multiple" formatted="false">%d Caracteres Restantes, %d Mensagens</string>
-  <string name="quickreply_title">Resposta Rápida</string>
-  <string name="quickreply_from_text">%s</string>
-  <string name="quickreply_preset_button">Modelos</string>
-  <string name="quickreply_send_button">Enviar</string>
-  <string name="quickreply_sending_toast">A Enviar Mensagem...</string>
-  <string name="quickreply_nomessage_toast">Enviar</string>
-  <string name="loading_message">A Carregar...</string>
-  <string name="error_message">Erro</string>
-  <string name="error_no_voice_recognition">Reconhecimento de Voz Não Disponivel neste Dispositivo</string>
-  <string name="pref_button_config_title">Configuração de Botões</string>
-  <string name="pref_button_config_summary">Configuração de Botões do Popup</string>
-  <string name="pref_button_summary">Definição Actual: %s</string>
-  <string name="pref_button1_title">Configuração Botão 1</string>
-  <string name="pref_button2_title">Configuração Botão 2</string>
-  <string name="pref_button3_title">Configuração Botão 3</string>
-  <string name="pref_donate_title">Doação para SMS Enhancer</string>
-  <string name="pref_donate_text">SMS Enhancer é uma aplicação gratuita que eu crio nos meus tempos livres. Se a acha útil, e pode dispensar algum dinheiro, uma doação seria muito apreciada.\n\nObrigado!</string>
-  <string name="pref_donate_market_button">Doar Via Android Market</string>
-  <string name="pref_donate_paypal_button">Doar Via PayPal</string>
-  <string name="view_contact">Ver Contacto</string>
-  <string name="pref_quickreply_title">Resposta Rápida</string>
-  <string name="pref_quickreply_summaryon">Resposta Rápida está Activa</string>
-  <string name="pref_quickreply_summaryoff">Resposta Rápida está Desactiva</string>
-  <string name="pref_quickreply_bothreplybuttons">Ambos os Botões estão Activos, para os configurar por favor vá ao ecrã de configuração de botões</string>
-  <string name="pref_quickreply_noreplybuttons">Nenhum Botão de Resposta está actualmente activo, para os configurar por favor vá ao ecrã de configuração de botões</string>
-  <string name="button_replybyaddress">Responder</string>
-  <string name="pref_notif_signature_title">Assinatura de Resposta Rápida</string>
-  <string name="pref_notif_signature_summary">Aparece no fim de cada Resposta Rápida</string>
-  <string name="eula_title">Acordo de uso do SMS Enhancer</string>
-  <string name="eula_accept">Aceitar</string>
-  <string name="eula_refuse">Desinstalar</string>
-  <string name="pref_delivery_report_title">Relatórios de Entrega</string>
-  <string name="pref_delivery_report_summary">Requerer um relatório de entrega para cada mensagem enviada via Resposta Rápida</string>
-  <string name="pref_split_message_title">Dividir Mensagens Longas</string>
-  <string name="pref_split_message_summaryon">Mensagens Longas serão divididas (apenas necessário para algumas operadoras CDMA)</string>
-  <string name="pref_split_message_summaryoff">Mensagens Longas não serão divididas (apenas necessário para algumas operadores CDMA)</string>
-  <string name="pref_autorotate_title">Auto-Rotação Sempre Activa</string>
-  <string name="pref_autorotate_summaryon">Popup Irá Sempre Rodar</string>
-  <string name="pref_autorotate_summaryoff">Popup irá rodar automaticamente no ecrã de fundo</string>
-  <string name="pref_screen_on_title">Ligar ecrã para Popup</string>
-  <string name="pref_screen_on_summaryon">O Ecrã irá ligar quando um Popup é mostrado</string>
-  <string name="pref_screen_on_summaryoff">O Ecrã não será ligado quando um Popup é mostrado</string>
-  <string name="pref_screen_category">Controlo de Ecrã</string>
-  <string name="quickreply_sent_toast">Mensagem enviada</string>
-  <string name="quickreply_failed_send_later">De momento não é possível enviar a sua mensagem. Será enviar quando o serviço voltar a ficar disponível.</string>
-  <string name="quickreply_failed">Envio Falhado</string>
-  <string name="pref_custom">Personalizado</string>
-  <string name="pref_notif_repeat_times_entries_keep_repeting">Continuar a repetir</string>
-  <string name="pref_timeout_entries_10s">10 segundos</string>
-  <string name="pref_timeout_entries_20s">20 segundos</string>
-  <string name="pref_timeout_entries_30s">30 segundos</string>
-  <string name="pref_timeout_entries_1m">1 minuto</string>
-  <string name="pref_timeout_entries_2m">2 minutos</string>
-  <string name="pref_timeout_entries_5m">5 minutos</string>
-  <string name="pref_timeout_entries_10m">10 minutos</string>
-  <string name="pref_vibrate_pattern_entries_normal">Normal</string>
-  <string name="pref_vibrate_pattern_entries_long">Vibrar Longo</string>
-  <string name="pref_vibrate_pattern_entries_multiple_short">Curto Múltiplo</string>
-  <string name="pref_vibrate_pattern_entries_multiple_long">Longo Múltiplo</string>
-  <string name="pref_led_color_blue">Azul</string>
-  <string name="pref_led_color_green">Verde</string>
-  <string name="pref_led_color_red">Vermelho</string>
-  <string name="pref_led_color_yellow">Amarelo</string>
-  <string name="pref_led_color_magenta">Magenta</string>
-  <string name="pref_led_color_cyan">Cyan</string>
-  <string name="pref_led_pattern_entries_fast">Rápido</string>
-  <string name="pref_led_pattern_entries_normal">Normal</string>
-  <string name="pref_led_pattern_entries_slow">Lento</string>
+<!-- App Strings -->
+   <string name="app_name">SMS Enhancer</string>   
+   <string name="new_text_at">Nova mensagem em %s</string>
+   <string name="unread_text_waiting">%d outras mensagens não lidas</string>
+   <string name="mms_subject">Assunto:</string>
+
+<!-- Notification Strings -->
+   <string name="notification_multiple_title">Novas mensagens:</string>
+   <string name="notification_multiple_text">%d mensagens não lidas.</string>
+   <string name="notification_scroll" formatted="false">%s: %s</string>
+   <string name="notification_scroll_privacy">Nova mensagem de: %s</string>
+   <string name="notification_scroll_privacy_no_name">Nova mensagem</string>
+
+<!-- Button Strings -->   
+   <string name="button_close">Fechar</string>
+   <string name="button_reply">Responder</string>
+   <string name="button_inbox">Caixa de entrada</string>
+   <string name="button_view">Ver</string>
+   <string name="button_view_mms">Ver MMS</string>
+   <string name="button_delete">Deletar</string>
+   <string name="button_next">Proximo</string>
+   <string name="button_previous">Anterior</string>
+   <string name="button_unlock">Destravar</string>
+   <string name="button_tts">Texto-para-fala</string>
+   
+   <string name="button_speak">Falar</string>
+   <string name="button_delete_noconfirm">Deletar (sem confirmação)</string>
+   <string name="button_quickreply">Resposta rápida</string>
+   <string name="button_disabled">Desabilitado</string>
+   
+<!-- Main Preferences -->
+   <string name="pref_config_title">Configuração do SMS Enhancer</string>
+   <string name="pref_other_title">Outro</string>
+
+   <string name="pref_enabled_title">Enable SMS Enhancer</string>
+   <string name="pref_enabled_summaryon">SMS Enhancer está habilitado</string>
+   <string name="pref_enabled_summaryoff">SMS Enhancer está desabilitado</string>
+
+   <string name="pref_about_title">Sobre</string>
+   <string name="pref_about_summary">Sobre o SMS Enhancer</string>
+   <string name="pref_about_text">SMS Enhancer é uma aplicação baseada no SmsPopup por Adam K Email: adam\@everythingandroid.net\n\n Essa aplicação permite que o usuário controle a maneira com que recebem notificações, você pode controlar a ativação do sms de acordo com determinadas condições, como contatos ou palavras-chave.\nPor exemplo, se uma mensagem contém uma palavra configurada no aplicativo, por exemplo, \"meu amor\"você pode escolher se a notificação será ativada ou até mesmo enviar uma mensagem personalizada.\n\nPara mais informações contate zenyagami@gmail.com</string>
+
+   <string name="pref_faq_title">FAQ</string>
+   <string name="pref_faq_summary">Perguntas frequentes</string>
+   <string name="pref_faq_url">http://code.google.com/p/android-smspopup/wiki/FAQ</string>
+
+   <string name="pref_releasenotes_title">Quais as novidades?</string>
+   <string name="pref_releasenotes_summary">Veja as atualizações dessa versão</string>
+   <string name="pref_releasenotes_text">\nNo website</string>
+
+   <string name="pref_sendemail_title">E-mail para o desenvolvedor</string>
+   <string name="pref_sendemail_summary">Envie comentários ou sugestões para o desenvovedor</string>
+   <string name="pref_sendemail_dialog">Posso incluir informações do seu sistema no e-mail? (Me ajuda a resolver problemas mais rápido)?</string>
+   <string name="pref_sendemail_buttonok">Claro</string>
+   <string name="pref_sendemail_buttoncancel">De maneira alguma</string>
+   
+<!-- Additional Preferences -->
+   <string name="pref_additional_title">Configurações adicionais</string>
+   <string name="pref_additional_summary">Configurações adicionais do SMS Enhancer</string>
+
+   <string name="pref_timeout_title">Tempo para desligamento da tela</string>
+   <string name="pref_timeout_summary">A tela vai desligar depois de determinado tempo</string>
+
+   <string name="pref_dimscreen_title">Popup suaviza o brilho da tela</string>
+   <string name="pref_dimscreen_summaryon">O brilho da tela será reduzido (Economiza bateria)</string>
+   <string name="pref_dimscreen_summaryoff">A tela de popup será brilhante</string>
+
+   <string name="pref_privacy_category">Privacidade</string>
+
+   <string name="pref_privacy_title">Modo de privacidade</string>
+   <string name="pref_privacy_summaryon">Popup vai usar o modo de privacidade</string>
+   <string name="pref_privacy_summaryoff">Popup vai mostrar todas os textos das mensagens</string>
+
+   <string name="pref_privacy_sender_title">Ocultar nome dos contatos</string>
+   <string name="pref_privacy_sender_summaryon">O nome do remetente também será ocultado</string>
+   <string name="pref_privacy_sender_summaryoff"> O nome do remetente será mostrado </string>
+
+   <string name="pref_privacy_always_title">Sempre usar modo de privacidade</string>
+   <string name="pref_privacy_always_summaryon">Modo de privacidade sempre será usado</string>
+   <string name="pref_privacy_always_summaryoff">Apenas usar o modo de privacidade se a tela estiver travada</string>
+
+   <string name="pref_markread_title">Marcar como lida</string>
+   <string name="pref_markread_summaryon">Mensagens serão marcadas como lidas quando clicar em \"Fechar\"</string>
+   <string name="pref_markread_summaryoff"> Mensagens não serão marcadas como lidas quando clicar em \"Fechar\"</string>
+
+   <string name="pref_onlyShowOnKeyguard_title">Restringir popup</string>
+   <string name="pref_onlyShowOnKeyguard_summaryon">O popup só vai aparecer quando o bloqueio e teclas estiver sendo exibido</string>
+   <string name="pref_onlyShowOnKeyguard_summaryoff">O popup sempre será exibido</string>
+
+   <string name="pref_require_unlock_title">Requer desbloqueio de tela</string>
+   <string name="pref_require_unlock_summaryon">Botões estarão ocultos até que a tela seja desbloqueada</string>
+   <string name="pref_require_unlock_summaryoff">Botões sempre serão mostrados</string>
+
+   <string name="pref_inbox_app_title">Escolher aplicativo de mensagens</string>
+   <string name="pref_inbox_app_summary">Escolher o aplicativo para múltiplas mensagens</string>
+   <string name="pref_inbox_app_info">Note que o aplicativo do botão "Responder" é definido pelo sistema</string>
+
+   <string name="pref_show_buttons_title">Mostrar botões no popup</string>
+   <string name="pref_show_buttons_summaryon">Botões no popup serão sempre visíveis</string>
+   <string name="pref_show_buttons_summaryoff">Botões estarão ocultos com pressionamento longo</string>
+
+   <string name="pref_show_delete_button_title">Mostre o botão de deletar</string>
+   <string name="pref_show_delete_button_summaryon">Botão de deletar está oculto</string>
+   <string name="pref_show_delete_button_summaryoff">Botão de delatar está aparente</string>
+   <string name="pref_show_delete_button_dialog_title">Deletar mensagem</string>
+   <string name="pref_show_delete_button_dialog_text">Tem certeza?</string>
+
+   <string name="pref_blur_title">Fundo desfocado</string>
+   <string name="pref_blur_summaryon">O fundo da janela da mensagem será desfocado</string>
+   <string name="pref_blur_summaryoff"> O fundo da janela da mensagem não será desfocado </string> 
+
+<!-- Notification Preferences -->
+   <string name="pref_notif_title">Notificações</string>
+   <string name="pref_notif_summary">Configurações das notificações</string>
+   
+   <!-- Category headings -->
+   <string name="pref_notif_category_title">Configurações das notificações</string>
+   <string name="pref_vibrate_category_title">Configurações de vibração</string>
+   <string name="pref_flashled_category_title">Configurações do LED</string>
+   <string name="pref_reminder_category_title">Configurações de lembrete</string>
+
+   <!-- General Notification Preferences -->
+   <string name="pref_notif_enabled_title">Habilitar notificações</string>
+   <string name="pref_notif_enabled_summaryon">Notificações estão habilitadas</string>
+   <string name="pref_notif_enabled_summaryoff">Notificações estão desabilitadas</string>
+   <string name="pref_notif_enabled_warning">Para evitar conflitos e alertas múltiplos, por favor desabilite as notificações dos SMS do sistema e de qualquer outro aplicativo que produza uma notificação quando um SMS é recebido.\n\nPara desligar as notificações do sistema, vá para o aplicativo de mensagem, aperte a tecla de menu -> configurações e desmarque a opção de notificações.</string>
+
+   <string name="pref_popup_enabled_title">Mostrar um popup</string>
+   <string name="pref_popup_enabled_summaryon">A mensagem vai abrir em um popup</string>
+   <string name="pref_popup_enabled_summaryoff">A mensagem só vai aparecer como uma notificação</string>
+
+   <string name="pref_notif_test_title">Teste de notificação</string>
+   <string name="pref_notif_test_summary">Teste sua notificação</string>
+   <string name="pref_notif_test_message">Testando sua notificação agora!</string>
+   
+   <string name="pref_notif_sound_title">Som de notificação</string>
+   <string name="pref_notif_sound_summary">Este som vai tocar durante uma notificação</string>
+
+   <string name="pref_notifyOnCall_title">Notificar durante uma chamada</string>
+   <string name="pref_notifyOnCall_summaryon">Som vai tocar durante uma chamada</string>
+   <string name="pref_notifyOnCall_summaryoff">Som não vai tocar durante uma chamada</string>
+      
+   <string name="pref_notif_icon_title">Ícone de notificação</string>
+   <string name="pref_notif_icon_summary">Troca o ícone da área de notificação</string>
+  
+   <string name="pref_vibrate_title">Vibração</string>
+   <string name="pref_vibrate_summaryon">Vibração está ligada</string>
+   <string name="pref_vibrate_summaryoff">Vibração está desligada</string>
+
+   <!-- Vibrate Preferences -->
+   <string name="pref_vibrate_pattern_title">Padrão de vibração</string>
+   <string name="pref_vibrate_pattern_summary">Configure o padrão de vribração</string>
+   <string name="pref_vibrate_pattern_ok">Configurar um padrão de vibração personalizado</string>
+   <string name="pref_vibrate_pattern_bad">Padrão personalizado inválido</string>
+   <string name="pref_vibrate_pattern_help">Insira um padrão de vibração customizado, seguindo o seguinte formato:\nmilisegundos desligado, milisegundos ligado, etc.\n\nPor exemplo:\n0,1000\n0,500,200,500,200,500</string>
+   
+   <!-- LED Preferences -->
+   <string name="pref_flashled_title">Piscar o LED</string>
+   <string name="pref_flashled_summaryon">O LED pisca quando uma mensagem é recebida</string>
+   <string name="pref_flashled_summaryoff">O LED não pisca quando uma mensagem é recebida</string>
+   
+   <string name="pref_flashled_color_title">Cor do LED</string>
+   <string name="pref_flashled_color_summary">A cor do LED</string>
+   <string name="pref_flashled_color_custom_dialog_red">Vermelho:</string>
+   <string name="pref_flashled_color_custom_dialog_green">Verde:</string>
+   <string name="pref_flashled_color_custom_dialog_blue">Azul:</string>
+   <string name="pref_flashled_color_custom_dialog_preview">Prévia:</string>
+   <string name="pref_flashled_color_custom_set">Cor personallizada do LED</string>
+
+   <string name="pref_flashled_pattern_title">Frequência com que o LED pisca</string>
+   <string name="pref_flashled_pattern_summary">Configure a velocidade com que o LED pisca</string>
+   <string name="pref_flashled_pattern_ok">Velocidade personalizada do LED</string>
+   <string name="pref_flashled_pattern_bad">A velocidade inserida é invalida</string>
+   <string name="pref_flashled_pattern_help">Insira o tempo em milisegundos para que o LED fique ligado e desligado</string>
+   <string name="pref_flashled_pattern_help_on">Tempo ligado:</string>
+   <string name="pref_flashled_pattern_help_off">Tempo desligado:</string>
+
+   <!-- Notification Repeat Preferences -->
+   <string name="pref_notif_repeat_title">Habilitar lembretes</string>
+   <string name="pref_notif_repeat_summaryon">Lembretes de mensagens não lidas estão habilitadas</string>
+   <string name="pref_notif_repeat_summaryoff">Lembretes de mensagens não lidas estão desabilitadas</string>
+
+   <string name="pref_notif_repeat_interval_title">Intervalo do lembrete</string>
+   <string name="pref_notif_repeat_interval_summary">O período de tempo entre os lembretes</string>
+   <string name="pref_notif_repeat_interval_dialogTitle">Intervalo (minutos)</string>
+
+   <string name="pref_notif_repeat_times_title">Número de lembretes</string>
+   <string name="pref_notif_repeat_times_summary">O número de notificações de lembrete a serem criadas</string>
+
+   <string name="pref_notif_repeat_screen_on_title">Ligar a tela para os lembretes</string>
+   <string name="pref_notif_repeat_screen_on_summaryon">Lembretes ligarão a tela novamente</string>
+   <string name="pref_notif_repeat_screen_on_summaryoff">Lembretes não ligarão a tela</string>
+   <string name="pref_notif_repeat_screen_on_warning">Aviso - Ligar a tela para lebretes pode afetar significativamente a vida útil da bateria</string>
+
+<!-- Contact Notification Customization Strings -->
+   <string name="pref_notif_default_title">Notificações padrão</string>
+   <string name="pref_notif_default_summary">Notificação para todos os contatos, sem configurações individuais</string>
+
+   <string name="pref_contacts_title">Notificação de contatos</string>
+   <string name="pref_contacts_summary">Notificação individual para contatos</string>
+
+   <string name="pref_notif_help_title">Ajuda</string>
+   <string name="pref_notif_help_summary">Ajuda para notificações</string>
+   <string name="pref_notif_help_message">O SMS Enhancer agora oferece a habilidade de customizar as notificações para cada contato. Quando uma nova mensagem chega, o SMS Enhancer vai primeiro verificar se o contato tem uma notificação personalizada. Caso tenha, essas configurações serão utilizadas, caso contrário, as configurações padrão serão utilizadas.\n\nUsando essa funcionalidade, você pode fazer certas configurações para que apenas alguns contatos exibam um popup, enquanto que os outros exibam apenas uma notificação padrão. Você também pode ignorar determinados contatos colocando sua notificação no silencioso.</string>
+
+   <string name="contact_customization_add">Adicionar notificação personalizada</string>
+   <string name="contact_customization_edit">Editar notificação personalizada </string>
+   <string name="contact_customization_remove">Remover notificação personalizada </string>
+   <string name="contact_customization_removed_toast">Notificação personalizada removida</string>
+   <string name="contact_customization_save">Salvar</string>
+   <string name="contact_customization_title">Notificações para %s</string>
+   <string name="contact_customization_enabled">Notificações estão habilitadas para %s</string>
+   <string name="contact_customization_disabled">Notificações estão desabilitadas para %s</string>
+   <string name="contact_customization_add_hint">Adicionar/editar informações de contato...</string>
+  
+   <string name="ringtone_silent">Silencioso</string>
+  
+<!-- Preset Quick Reply Message Strings -->
+   <string name="pref_message_presets_title">Mensagens pré configuradas</string>
+   <string name="pref_message_presets_summary">Configure mensagens pré determinadas para respostas rápidas</string>
+
+   <string name="message_presets_add">Adicionar mensagem rápida</string>
+   <string name="message_presets_edit">Editar mensagem rápida</string>
+    
+   <string name="message_presets_add_text">Criar</string>
+   <string name="message_presets_save_text">Salvar</string>
+   <string name="message_presets_delete_text">Remover</string>
+   <string name="message_presets_edit_text">Editar</string>
+   <string name="message_presets_reorder_text">Mover para o topo</string>
+   <string name="message_presets_empty_text">Sem pré configurações definidas</string>
+
+   <string name="message_presets_add_toast">Mensagem pré definida adicionada</string>
+   <string name="message_presets_save_toast"> Mensagem pré definida atualizada</string>
+   <string name="message_presets_delete_toast"> Mensagem pré definida removida</string>
+   <string name="message_presets_reorder_toast"> Mensagem pré definida movida para o topo</string>
+   <string name="message_presets_error_toast">Erro - Por favor tente novamente</string>
+    
+<!-- Quick Reply Strings -->
+   <string name="message_counter">%d caracteres restantes</string>
+   <string name="message_counter_multiple" formatted="false">%d caracteres restantes, %d mensagens</string>
+   
+   <string name="quickreply_title">Resposta rápida</string>
+   <string name="quickreply_from_text">Para: %s</string>
+   <string name="quickreply_preset_button">Pre configurações</string>
+   <string name="quickreply_send_button">Enviar</string>
+   <string name="quickreply_sending_toast">Enviando mensagem...</string>
+   <string name="quickreply_nomessage_toast">Enviar</string>
+    
+<!-- Text-To-Speech and Voice Transcription Strings -->
+   <string name="loading_message">Carregando...</string>
+   <string name="error_message">Erro</string>
+   <string name="error_no_voice_recognition">Reconhecimento de voz não disponível neste dispositivo</string> 
+      
+<!-- Popup Button Configuration -->
+   <string name="pref_button_config_title">Botão de configuração</string>
+   <string name="pref_button_config_summary">Botão de configuração do popup</string>
+   <string name="pref_button_summary">Configuração atual: %s</string>
+
+   <string name="pref_button1_title">Configuração do botão 1</string>
+   <string name="pref_button2_title">Configuração do botão 2 </string>
+   <string name="pref_button3_title">Configuração do botão 3 </string>
+    
+<!-- Donate Strings (not used right now) -->
+   <string name="pref_donate_title">Compre o SMS Enhancer Plus</string>    
+   <string name="pref_donate_text">SMS Enhancer é um aplicativo gratuito no qual eu trabalho no meu tempo livre.\nSe você o acha útil, e quer colaborar, uma doação será sempre bem-vinda.\n\nObrigado!</string>
+   <string name="pref_donate_market_button">Compre a versão PRO na Play Store</string>
+   <string name="pref_donate_paypal_button">Doe via PayPal</string>
+
+<!-- Misc missing string -->
+   <string name="view_contact">Ver contato</string>
+
+<!-- Quick Reply Checkbox Preference -->
+   <string name="pref_quickreply_title">Resposta rápida</string>
+   <string name="pref_quickreply_summaryon">A resposta rápida está habilitada</string>
+   <string name="pref_quickreply_summaryoff">A resposta rápida está desabilitada</string>
+   <string name="pref_quickreply_bothreplybuttons">Ambos os botões de resposta estão habilitados, para configurá-los vá até o menu de configuração de botões</string>
+   <string name="pref_quickreply_noreplybuttons"> Nenhum dos botões de resposta estão habilitados, para configurá-los vá até o menu de configuração de botões </string>
+
+<!-- Misc missing string -->
+   <string name="button_replybyaddress">Responder (para o número de telefone)</string>
+   
+<!-- Quick Reply Signature pref -->
+   <string name="pref_notif_signature_title">Assinatura da resposta rápida</string>
+   <string name="pref_notif_signature_summary">Aparece no final de cada mensagem</string>
+
+<!-- Eula Strings -->
+   <string name="eula_title">Contrato de licença do SMS Enhancer</string>
+   <string name="eula_accept">Aceitar</string>
+   <string name="eula_refuse">Desinstalar</string>
+
+<!-- Send message prefs -->
+   <string name="pref_delivery_report_title">Relatórios de entrega</string>
+   <string name="pref_delivery_report_summary">Pedir um relatório de entrega para cada resposta rápida enviada</string>
+
+   <string name="pref_split_message_title">Dividir mensagens longas</string>
+   <string name="pref_split_message_summaryon">Mensagens longas serão divididas (necessário apenas para algumas operadoras CDMA)</string>
+   <string name="pref_split_message_summaryoff"> Mensagens longas não serão divididas (necessário apenas para algumas operadoras CDMA) </string>
+    
+<!-- Other new prefs -->
+   <string name="pref_autorotate_title">Rotação automática sempre ligada</string>
+   <string name="pref_autorotate_summaryon">O popup sempre vai girar automaticamente</string>
+   <string name="pref_autorotate_summaryoff">O popup vai girar de acordo com a posição da tela em que se encontra</string>
+
+   <string name="pref_screen_on_title">Ligar tela para o popup</string>
+   <string name="pref_screen_on_summaryon">A tela vai ligar quando o popup aparecer</string>
+   <string name="pref_screen_on_summaryoff">A tela não vai ligar quando o popup aparecer</string>
+    
+   <string name="pref_screen_category">Controle de tela</string>
+        
+<!-- Other new Quick Reply prefs -->    
+   <string name="quickreply_sent_toast">Mensagem enviada</string>
+   <string name="quickreply_failed_send_later">Não foi possível enviar a mensagem. Ela será enviada assim que o serviço estiver disponível.</string>
+   <string name="quickreply_failed">Falha ao enviar a mensagem</string>
+
+<!-- Arrays texts -->
+   <string name="pref_custom">Personalizar</string>
+
+   <string name="pref_notif_repeat_times_entries_keep_repeting">Continue repetindo</string>
+    
+   <string name="pref_timeout_entries_10s">10 segundos</string>
+   <string name="pref_timeout_entries_20s">20 segundos</string>
+   <string name="pref_timeout_entries_30s">30 segundos</string>
+   <string name="pref_timeout_entries_1m">1 minuto</string>
+   <string name="pref_timeout_entries_2m">2 minutos</string>
+   <string name="pref_timeout_entries_5m">5 minutos</string>
+   <string name="pref_timeout_entries_10m">10 minutos</string>
+
+   <string name="pref_vibrate_pattern_entries_normal">Normal</string>
+   <string name="pref_vibrate_pattern_entries_long">Vibração longa</string>
+   <string name="pref_vibrate_pattern_entries_multiple_short">Múltiplas curtas</string>
+   <string name="pref_vibrate_pattern_entries_multiple_long">Múltiplas longas</string>
+
+   <string name="pref_led_color_blue">Azul</string>
+   <string name="pref_led_color_green">Verde</string>
+   <string name="pref_led_color_red">Vermelho</string>
+   <string name="pref_led_color_yellow">Amarelo</string>
+   <string name="pref_led_color_magenta">Magenta</string>
+   <string name="pref_led_color_cyan">Ciano</string>
+
+   <string name="pref_led_pattern_entries_fast">Rápido</string>
+   <string name="pref_led_pattern_entries_normal">Normal</string>
+   <string name="pref_led_pattern_entries_slow">Devagar</string>
+  <!-- SMS Enhancer Strings -->
+    <string name="pref_twitter_title">Me siga</string>
+    <string name="pref_keywords_title">Habilitar palavras chave</string>
+    <string name="pref_keywords_summaryon">O popup está desligado quando as palavras chave coincidirem</string>
+    <string name="pref_keywords_summaryoff">O popup está ligado quando as palavras chave coincidirem</string>
+    <string name="pref_keywordslist_title">Entre com as palavras chave</string>
+    <string name="pref_keywordslist_summary">use vígula para separar as palavras chave</string>
+    
+    <string name="pref_keywordsNotification_title">Habilitar notificação</string>
+    <string name="pref_keywordsNotification_summaryon">Notificação ligada</string>
+    <string name="pref_keywordsNotification_summaryoff">Notificação desligada</string>
+    <string name="pref_keywordsCustomMsg_title">Mensagem personalizada</string>
+     
+    <string name="pref_keywordsEnableCustomMsg_title">Sobrescrever mensagem</string>
+    <string name="pref_keywordsEnableCustomMsg_summaryon">A mensagem customizada será mostrada</string>
+    <string name="pref_keywordsEnableCustomMsg_summaryoff">Sem mensagem customizada</string>
+        
+     <string name="pref_keywordsCustomMsg_title">Mensagem customizada</string>
+     <string name="pref_keywordsCustomMsg_summaryon">Mensagem customizada se as palavras chave coincidirem</string>
+     <string name="pref_keywordsCustomMsgPopUp_title">Habilita popup para mensagem customizada</string>
+     <string name="pref_keywordsCustomMsgPopUp_summaryon">O popup será exibido</string>
+     <string name="pref_keywordsCustomMsgPopUp_summaryoff">O popup não será exibido</string>
+     
+     <string name="pref_keywordsHtcSecure_title">Mover a HTC Secure Box</string>
+     <string name="pref_keywordsHtcSecure_summaryon">Mover para Secure Box (Apenas HTC)</string>
+     <string name="pref_keywordsHtcSecure_summaryoff">O SMS continuará na pasta original</string>
+     
+     <string name="pref_enablebackground_title">Habilitar imagem de fundo personalizada para o popup</string>
+     <string name="pref_enablebackground_summaryOn">Imagem padrão</string>
+     <string name="pref_enablebackground_summaryOff">Sem imagem</string>
+     
+     <string name="pref_enablebackgroundcustom_title">Habilitar imagem personalizada</string>
+     <string name="pref_enablebackgroundcustom_summaryOn">Imagem padrão</string>
+     <string name="pref_enablebackgroundcustom_summaryOff">Selecionar imagem</string>
+     
+    <string name="pref_selectpicture_intent">Selecionar Imagem</string>
+     
+	<string name="pref_backgroundcustomselect_titile">Selecionar Imagem</string>
+	<string name="pref_transparency_titile">Nível de transparência</string>
+	<string name="pref_transparency_summary">Configure o nível de transparência do popup</string>
+	<string name="pref_transparency_message">Selecione o nível</string>
+	<string name="pref_transparency_percent">% transparente</string>
+    
+   <string name="pref_popupback_enabled_title">Marcar como lida com o botão de voltar</string>
+  <string name="pref_popupback_enabled_summaryon">As mensagens serão marcadas como lidas quando o botão de voltar for pressionado</string>
+  <string name="pref_popupback_enabled_summaryoff"> As mensagens não serão marcadas como lidas quando o botão de voltar for pressionado </string>     
+         
+    <string name="pro_version">Necessária a versão PRO</string>
+    <string name="pro_versionTitle">Opção somente disponível na versão PRO</string>
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Seletor de cores</string>
+    <string name="press_color_to_apply">Pressione na cor para aplicar</string>    
+    
+    <!-- Preferences COlor Picker-->
+    <string name="pref_category">Categoria</string>
+    <string name="pref_colorsms_title">Escolha a cor do popup de SMS</string>
+    <string name="pref_colorsms_summary">Escolha a cor da mensagem SMS</string>
 </resources>
