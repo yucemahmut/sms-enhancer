@@ -1,0 +1,3 @@
+This is the open source code from sms enhancer, feel free to ask for features, or helpe withe the code.
+The original code its from Adam K from Sms Popup, since seems he its not developing anymore the app, im taking part of his work, and added my work. thanks to him for a great resource
+If you want support my work, consider buy the "plus" version that will help me to get more features and more devices support. Thanks
